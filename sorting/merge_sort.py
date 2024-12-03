@@ -29,9 +29,6 @@ def merge(xs: List[int], a: int, mid: int, b: int):
         mid (int): The ending index of the first sorted subarray and the
                    index immediately before the start of the second subarray.
         b (int): The ending index of the second sorted subarray.
-
-    Returns:
-        List[int]: The modified list `xs` with the subarrays merged into a single sorted subarray.
     """
     left_size = mid - a + 1
     right_size = b - mid
