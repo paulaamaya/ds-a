@@ -9,3 +9,10 @@ Algorithms that take in an array with $n$ elements and return a non-descending p
 - [Insertion sort](./sorting/insertion_sort.py)
 - [Selection sort](./sorting/selection_sort.py)
 - [Merge sort](./sorting/merge_sort.py)
+
+---
+
+# Divide & Conquer
+
+- [Iterative Binary Search](./d&c/bin_search_iterative.py)
+- [Recursive Binary Search](./d&c/bin_search_recursive.py)

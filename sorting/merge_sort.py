@@ -7,6 +7,11 @@ def merge_sort(xs: List[int], a: int, b: int):
 
     Merge sort is a divide-and-conquer algorithm that recursively divides the array into two halves,
     sorts each half, and then merges the two sorted halves into a single sorted subarray.
+
+    Parameters:
+        xs (List[int]): The list of integers to be sorted. The sorting is performed in-place.
+        a (int): The starting index of the subarray to be sorted.
+        b (int): The ending index of the subarray to be sorted.
     """
     if a < b:
         mid = (a + b) // 2
