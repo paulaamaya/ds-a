@@ -1,26 +1,26 @@
 #include <stdio.h>
 
 /**
-* Sorts a list of integers in ascending order using the insertion sort algorithm.
+* Sorts a list of integers in ascending order using the selection sort algorithm.
 * 
-* The function iterates through the list, comparing each element to its predecessors
-* and shifting them as needed to insert the current element in its correct position.
+* The algorithm works by iteratively finding the smallest element in the unsorted portion of the list
+* and swapping it with the first element in the unsorted portion. This process continues until the entire
+* list is sorted.
 * 
 * @param xs: An array of integers to be sorted.
 * @param n: Size of aray to be sorted.
 **/
-void insertion_sort(int xs[], int n){
-    // Start from second element
-    for (int i = 1; i < n; i++) {
-        int key = xs[i];
-        int j = i - 1;
-        // Move elements in xs[0...i-1] that are greater to key one position to right
-        while (j >= 0 && key < xs[j]) {
-            xs[j + 1] = xs[j];
-            j--;
+void selection_sort(int xs[], int n){
+    for(int i = 0; i < n; i++){
+        int smallest = xs[i];
+        for (int j = i; j < n; j++) {
+            if (xs[j] < xs[i]) {
+                smallest = j;
+            }
         }
-        // Insert key in the correct position
-        xs[j + 1] = key;
+        int temp = xs[i];
+        xs[i] = xs[smallest];
+        xs[smallest] = temp;
     }
 }
 
@@ -29,9 +29,9 @@ int main(void){
     int ys[] = {6,5,4,3,2,1};
     int zs[] = {1,6,9,7,3,0};
 
-    insertion_sort(xs, 1);
-    insertion_sort(ys, 6);
-    insertion_sort(zs, 6);
+    selection_sort(xs, 1);
+    selection_sort(ys, 6);
+    selection_sort(zs, 6);
 
     printf("xs: [%d]\n", xs[0]);
 
