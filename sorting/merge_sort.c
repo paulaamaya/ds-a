@@ -55,11 +55,11 @@ void merge_sort(int xs[], int a, int b){
 * The function takes two contiguous sorted subarrays, `xs[a:mid+1]` and `xs[mid+1:b+1]`,
 * and merges them in-place into a single sorted subarray within `xs[a:b+1]`.
 * 
-*     @param xs: The list containing the subarrays to be merged.
-*     @param a: The starting index of the first sorted subarray.
-*     @param mid: The ending index of the first sorted subarray and immediately before
-*     the start of the second sorted subarray.
-*     @param b: The ending index of the second sorted subarray.
+* @param xs: The list containing the subarrays to be merged.
+* @param a: The starting index of the first sorted subarray.
+* @param mid: The ending index of the first sorted subarray and immediately before
+* the start of the second sorted subarray.
+* @param b: The ending index of the second sorted subarray.
 **/
 void merge(int xs[], int a, int mid, int b){
     int left_size = mid - a + 1;
