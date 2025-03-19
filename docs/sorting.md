@@ -18,4 +18,4 @@
 ## Merge Sort
 **Runtime:** $\mathcal{O}(n \log n)$
 
-**Description:**  Merger sort is a recursive sorting algorithm.  Each half of the array is sorted independently, then the two sorted sub-arrays are merged into the original array in the correct order.
+**Description:**  Merge sort is a recursive sorting algorithm.  Each half of the array is sorted independently, then the two sorted sub-arrays are merged into the original array in the correct order.

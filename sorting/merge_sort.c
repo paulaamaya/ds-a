@@ -1,34 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void merge_sort(int xs[], int a, int b);
 void merge(int xs[], int a, int mid, int b);
-
-int main(void){
-    int xs[] = {0};
-    int ys[] = {6,5,4,3,2,1};
-    int zs[] = {1,6,9,7,3,0};
-
-    merge_sort(xs, 0, 0);
-    merge_sort(ys, 0, 5);
-    merge_sort(zs, 0, 5);
-
-    printf("xs: [%d]\n", xs[0]);
-
-    printf("ys: [");
-    for (int i = 0; i < 6; i++) {
-        printf("%d, ", ys[i]);
-    }
-    printf("]\n");
-
-    printf("zs: [");
-    for (int i = 0; i < 6; i++) {
-        printf("%d, ", zs[i]);
-    }
-    printf("]\n");
-
-    return 0;
-}
 
 /**
 * Sorts a subarray of a list in ascending order using the merge sort algorithm.
@@ -105,4 +78,30 @@ void merge(int xs[], int a, int mid, int b){
 
     free(left);
     free(right);
+}
+
+int main(void){
+    int xs[] = {0};
+    int ys[] = {6,5,4,3,2,1};
+    int zs[] = {1,6,9,7,3,0};
+
+    merge_sort(xs, 0, 0);
+    merge_sort(ys, 0, 5);
+    merge_sort(zs, 0, 5);
+
+    printf("xs: [%d]\n", xs[0]);
+
+    printf("ys: [");
+    for (int i = 0; i < 6; i++) {
+        printf("%d, ", ys[i]);
+    }
+    printf("]\n");
+
+    printf("zs: [");
+    for (int i = 0; i < 6; i++) {
+        printf("%d, ", zs[i]);
+    }
+    printf("]\n");
+
+    return 0;
 }
